@@ -46,7 +46,7 @@ function setup() {
 	fairy.visible= true;
 	
 	Engine.run(engine);
-	keyPressed();
+//	keyPressed();
 
 }
 
@@ -73,8 +73,8 @@ if(keyCode===RIGHT_ARROW){
 	fairy.x=fairy.x+20;
 }
 if(keyCode===DOWN_ARROW){	
-	isStatic=false;
-Body.setStatic(starBody,isStatic);
+	//isStatic=false;
+Body.setStatic(starBody,false);
 star.x = starBody.position.x;
 star.y = starBody.position.y;
 
