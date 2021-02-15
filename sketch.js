@@ -46,7 +46,6 @@ function setup() {
 	fairy.visible= true;
 	
 	Engine.run(engine);
-//	keyPressed();
 
 }
 
@@ -54,14 +53,13 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  if(starBody.x>460&& starBody.position.y > 470){
-	isStatic=true;
-	  Body.setStatic(starBody,isStatic);
+ 	if(starBody.position.y > 470){
+	  Matter.Body.setStatic(starBody,true);
   }
   console.log(starBody.position.x);
 
   drawSprites();
-
+ 
 }
 
 function keyPressed() {
@@ -73,8 +71,8 @@ if(keyCode===RIGHT_ARROW){
 	fairy.x=fairy.x+20;
 }
 if(keyCode===DOWN_ARROW){	
-	//isStatic=false;
-Body.setStatic(starBody,false);
+	
+Matter.Body.setStatic(starBody,false);
 star.x = starBody.position.x;
 star.y = starBody.position.y;
 
